@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Secrets et configuration locale
+.env
+# Node
+node_modules/
+dist/
+# Notebooks et données générées (reproductibles avec la graine fixe)
+.ipynb_checkpoints/
+database/seed/*.csv
+backend/ml/artifacts/*.joblib
+# Système
+.DS_Store
+Thumbs.db
