@@ -22,7 +22,11 @@ class Settings(BaseSettings):
     postgres_db: str = "paypredict"
     postgres_host: str = "localhost"
     postgres_port: int = 5432
-
+    # --- sécurité (phase 3) ---
+    jwt_secret: str = "dev-only-change-me-use-a-long-random-string-0123456789"
+    access_token_minutes: int = 60
+    automation_api_key: str = "dev-only-automation-key-change-me" # clé partagée avec n8n
+    cors_origins: str = "http://localhost:5173" # séparées par des virgules
     @property
     def database_url(self) -> str:
         return (
